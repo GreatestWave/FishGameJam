@@ -29,6 +29,7 @@ if (keyboard_check_pressed(vk_enter) ||
 
         case 1:
             // COMPENDIUM
+			room_goto(rm_compendium);
             break;
 
         case 2:
