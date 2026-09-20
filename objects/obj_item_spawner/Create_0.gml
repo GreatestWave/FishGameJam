@@ -212,7 +212,8 @@ spawn_items = function() {
             new_item.sprite_index = selected_item.sprite;
 
             // Make all items approximately 16 pixels wide
-            var target_width = 16;
+            var target_width = 48;
+			var target_height = 48;
 
             var item_scale =
                 target_width

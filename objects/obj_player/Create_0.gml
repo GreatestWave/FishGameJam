@@ -1,7 +1,5 @@
 var target_width = 32;
 
-image_xscale = target_width / sprite_width;
-image_yscale = image_xscale;
 image_alpha = 0;
 
 move_speed = 3;
