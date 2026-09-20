@@ -300,6 +300,7 @@
     {"id":{"name":"spr_item","path":"sprites/spr_item/spr_item.yy",},},
     {"id":{"name":"spr_jump","path":"sprites/spr_jump/spr_jump.yy",},},
     {"id":{"name":"spr_jump1","path":"sprites/spr_jump1/spr_jump1.yy",},},
+    {"id":{"name":"spr_menu","path":"sprites/spr_menu/spr_menu.yy",},},
     {"id":{"name":"spr_mining","path":"sprites/spr_mining/spr_mining.yy",},},
     {"id":{"name":"spr_mining1","path":"sprites/spr_mining1/spr_mining1.yy",},},
     {"id":{"name":"spr_oldfish","path":"sprites/spr_oldfish/spr_oldfish.yy",},},
