@@ -6,7 +6,7 @@ if (
     && instance_exists(bobber_instance)
 ) {
     if (bobber_instance.visible) {
-        draw_set_color(c_white);
+        draw_set_color(c_black);
 
         draw_line_width(
             rod_x,
