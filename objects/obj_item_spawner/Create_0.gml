@@ -20,13 +20,37 @@ item_types = [
         id: "worm",
         name: "Worm",
         sprite: spr_worm,
-        weight: 50
+        weight: 30
+    },
+	{
+        id: "spider",
+        name: "Spider",
+        sprite: spr_spider,
+        weight: 30
     },
 	{
         id: "rock",
         name: "Rock",
         sprite: spr_rock,
         weight: 20
+    },
+	{
+        id: "bread",
+        name: "Bread",
+        sprite: spr_bread,
+        weight: 20
+    },
+	{
+        id: "book",
+        name: "Book",
+        sprite: spr_book,
+        weight: 20
+    },
+	{
+        id: "bottle",
+        name: "Treasure map",
+        sprite: spr_bottle,
+        weight: 5
     },
 	{
         id: "glasses",
@@ -38,13 +62,49 @@ item_types = [
         id: "BBag",
         name: "Cosmetical Bag",
         sprite: spr_BBag,
-        weight: 20
+        weight: 15
     },
 	{
         id: "realworm",
         name: "Worm?",
         sprite: spr_realworm,
         weight: 5
+    },
+	{
+        id: "coin",
+        name: "Coin",
+        sprite: spr_coin,
+        weight: 5
+    },
+	{
+        id: "cd",
+        name: "Music CD",
+        sprite: spr_cd,
+        weight: 15
+    },
+	{
+        id: "wok",
+        name: "Box and chopsticks",
+        sprite: spr_wok,
+        weight: 15
+    },
+	{
+        id: "poster",
+        name: "Wanted poster",
+        sprite: spr_poster,
+        weight: 10
+    },
+	{
+        id: "cd",
+        name: "Music CD",
+        sprite: spr_cd,
+        weight: 15
+    },
+	{
+        id: "battery",
+        name: "Battery",
+        sprite: spr_battery,
+        weight: 15
     },
 ];
 
