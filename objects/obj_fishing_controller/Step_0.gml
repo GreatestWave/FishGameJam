@@ -24,11 +24,11 @@ switch (state) {
     // KEYBOARD SELECTION
     // =============================
 
-    if (keyboard_check_pressed(vk_down)) {
+    if (keyboard_check_pressed(ord("S"))) {
         selected_bait++;
     }
 
-    if (keyboard_check_pressed(vk_up)) {
+    if (keyboard_check_pressed(ord("W"))) {
         selected_bait--;
     }
 
@@ -66,11 +66,6 @@ switch (state) {
             return_y + 26
         );
 
-    // Select button when mouse is over it
-    if (mouse_over_return) {
-        selected_bait = return_index;
-    }
-
 
     // =============================
     // RETURN TO MAIN MENU
@@ -81,13 +76,7 @@ switch (state) {
             selected_bait == return_index
             && keyboard_check_pressed(vk_enter)
         )
-        ||
-        (
-            mouse_over_return
-            && mouse_check_button_pressed(mb_left)
-        )
-        ||
-        keyboard_check_pressed(vk_escape);
+
 
     if (return_pressed) {
         room_goto(rm_main_menu);

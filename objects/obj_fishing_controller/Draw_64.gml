@@ -121,7 +121,7 @@ switch (state){
     // =============================
 
     var return_y =
-        115 + bait_count * 36 + 15;
+        115 + bait_count * 36 + 5;
 
     if (selected_bait == return_index) {
         draw_set_color(c_dkgray);
@@ -153,15 +153,15 @@ switch (state){
     draw_set_color(c_white);
 
     draw_text(
-        40,
-        panel_bottom - 42,
-        "Up/Down: select"
+        180,
+        panel_bottom - 22,
+        "W/S: select"
     );
 
     draw_text(
         40,
         panel_bottom - 22,
-        "Enter: confirm | Esc: return"
+        "Enter: confirm"
     );
 
     break;

@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sequence","folderPath":"folders/Sequence.yy","name":"Sequence","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -39,6 +40,7 @@
   },
   "name":"BLANK GAME",
   "resources":[
+    {"id":{"name":"obj_audio_manager","path":"objects/obj_audio_manager/obj_audio_manager.yy",},},
     {"id":{"name":"obj_bobber","path":"objects/obj_bobber/obj_bobber.yy",},},
     {"id":{"name":"obj_fisherman","path":"objects/obj_fisherman/obj_fisherman.yy",},},
     {"id":{"name":"obj_fishing_controller","path":"objects/obj_fishing_controller/obj_fishing_controller.yy",},},
@@ -52,6 +54,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"seq_mainChar_idle","path":"sequences/seq_mainChar_idle/seq_mainChar_idle.yy",},},
+    {"id":{"name":"snd_music","path":"sounds/snd_music/snd_music.yy",},},
     {"id":{"name":"beetroot_00_1","path":"sprites/beetroot_00_1/beetroot_00_1.yy",},},
     {"id":{"name":"beetroot_00","path":"sprites/beetroot_00/beetroot_00.yy",},},
     {"id":{"name":"cabbage_05_1","path":"sprites/cabbage_05_1/cabbage_05_1.yy",},},
@@ -305,8 +308,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_collect","path":"rooms/rm_collect/rm_collect.yy",},},
     {"roomId":{"name":"rm_fishing","path":"rooms/rm_fishing/rm_fishing.yy",},},
+    {"roomId":{"name":"rm_collect","path":"rooms/rm_collect/rm_collect.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
   ],
