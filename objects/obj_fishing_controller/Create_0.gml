@@ -95,161 +95,80 @@ get_bait_rarity = function(_bait_id) {
     return 0;
 };
 
-get_fish_from_bait = function(_bait_id) {
-    switch (_bait_id) {
-        case "worm":
-            return {
-				id: "common_fish",
-                name: "Common Fish",
-                description: "Well it's a fish, an avarage Joe from the fish world",
-                sprite: spr_commonfish,
-                rarity: 0,
-                points: 10
-            };
-		case "spider":
-            return {
-				id: "common_fish",
-                name: "Common Fish",
-                description: "Well it's a fish, an avarage Joe from the fish world",
-                sprite: spr_commonfish,
-                rarity: 0,
-                points: 10
-            };
-		case "rock":
-            return {
-				id: "rock_fish",
-                name: "Rock fish",
-                description: "I wonder what's their music taste is",
-                sprite: spr_rockfish,
-                rarity: 0,
-                points: 20
-            };
-		case "BBag":
-            return {
-                name: "Diva",
-				id: "diva",
-                description: "It's looks at me funny",
-                sprite: spr_beauty_fish,
-                rarity: 1,
-                points: 30
-            };
-		case "glasses":
-            return {
-                name: "Fisheye",
-				id: "eye_fish",
-                description: "Woah, you're looking for something?",
-                sprite: spr_eyefish,
-                rarity: 1,
-                points: 40
-            };
-		case "realworm":
-            return {
-                name: "Fish?",
-				id: "real_fish",
-                description: "What the hell is this?",
-                sprite: spr_realfish,
-                rarity: 3,
-                points: 100
-            };
-		case "battery":
-            return {
-                name: "Robot fish",
-				id: "robot_fish",
-                description: "Is this even a fish?",
-                sprite: spr_robot,
-                rarity: 2,
-                points: 60
-            };
-		case "coin":
-            return {
-                name: "Phishie bank",
-				id: "pig_fish",
-                description: "Wow this means I'm rich now?!",
-                sprite: spr_pigfish,
-                rarity: 3,
-                points: 200
-            };
-		case "poster":
-            return {
-                name: "Gill Fishstwood",
-				id: "wester_fish",
-                description: "Is that the legendary aquatic desperado?! Better toss it into the water before noon",
-                sprite: spr_westernfish,
-                rarity: 3,
-                points: 100
-            };
-		case "bottle":
-            return {
-                name: "Gold fish",
-				id: "gold_fish",
-                description: "What a beauty, it shines so bright",
-                sprite: spr_goldenfish,
-                rarity: 3,
-                points: 200
-            };
-		case "wok":
-            return {
-                name: "Sushi fish",
-				id: "sushi_fish",
-                description: "Now that is one gourmet fish",
-                sprite: spr_sushi,
-                rarity: 2,
-                points: 50
-            };
-		case "book":
-            return {
-                name: "Ol'fish",
-				id: "old_fish",
-                description: "Are fish retirnment houses a real thing?",
-                sprite: spr_oldfish,
-                rarity: 1,
-                points: 50
-            };
-		case "bread":
-            return {
-                name: "Bread fish",
-				id: "bread_fish",
-                description: "Damn it all soaked, look delicious tho",
-                sprite: spr_breadfish,
-                rarity: 1,
-                points: 40
-            };
+get_fish_by_id = function(_id)
+{
+    for (var i = 0; i < array_length(global.fish); i++)
+    {
+        if (global.fish[i].id == _id)
+            return global.fish[i];
     }
 
-    return {
-        name: "???",
-        description: "I don't really know how I hooked this",
-        sprite: spr_realfish,
-        rarity: 0,
-        points: 5
-    };
+    return undefined;
 };
-register_caught_fish = function(_fish) {
-    // Check whether this fish is already unlocked
-    for (
-        var i = 0;
-        i < array_length(global.fish_compendium);
-        i++
-    ) {
-        if (global.fish_compendium[i].id == _fish.id) {
+
+get_fish_from_bait = function(_bait_id)
+{
+    switch (_bait_id)
+    {
+        case "worm":
+			return get_fish_by_id("common_fish");
+			
+        case "spider":
+            return get_fish_by_id("common_fish");
+
+        case "rock":
+            return get_fish_by_id("rock_fish");
+
+        case "BBag":
+            return get_fish_by_id("diva");
+
+        case "glasses":
+            return get_fish_by_id("eye_fish");
+
+        case "realworm":
+            return get_fish_by_id("real_fish");
+
+        case "battery":
+            return get_fish_by_id("robot_fish");
+
+        case "coin":
+            return get_fish_by_id("pig_fish");
+
+        case "poster":
+            return get_fish_by_id("wester_fish");
+
+        case "bottle":
+            return get_fish_by_id("gold_fish");
+
+        case "wok":
+            return get_fish_by_id("sushi_fish");
+
+        case "book":
+            return get_fish_by_id("old_fish");
+
+        case "bread":
+            return get_fish_by_id("bread_fish");
+    }
+
+    return get_fish_by_id("unendified");
+};
+
+register_caught_fish = function(_fish)
+{
+    for (var i = 0; i < array_length(global.fish_compendium); i++)
+    {
+        if (global.fish_compendium[i].id == _fish.id)
+        {
             global.fish_compendium[i].caught_count++;
             return;
         }
     }
 
-    // This is the first catch of this fish
-    var new_entry = {
-        id: _fish.id,
-        name: _fish.name,
-        description: _fish.description,
-        sprite: _fish.sprite,
-        rarity: _fish.rarity,
-        points: _fish.points,
-        caught_count: 1
-    };
-
     array_push(
         global.fish_compendium,
-        new_entry
+        {
+            id: _fish.id,
+            caught_count: 1
+        }
     );
 };

@@ -18,12 +18,15 @@ for (var row = 0; row < rows; row++)
             draw_sprite(buttonSmall, 0, posX, posY);
 
 		// Item
-		if (menu[row][col] != -1)
+		var fish_id = menu[row][col];
+		var fish_get = get_fish_by_id(fish_id);
+		
+		if (fish_get != undefined)
 		{
-		    var item_sprite = menu[row][col];
+		    var item_sprite = fish_get.sprite;
 
 		    var item_w = sprite_get_width(item_sprite);
-		    var item_h = sprite_get_height(item_sprite);
+			var item_h = sprite_get_height(item_sprite);
 
 		    var max_size = 80;
 
@@ -46,4 +49,22 @@ for (var row = 0; row < rows; row++)
 		    draw_sprite_ext(item_sprite, 0, draw_x, draw_y, scale, scale, 0, c_white, 1);
 		}
     }
-}	
+};
+
+var selected_id = menu[selected_row][selected_col];
+var selected_fish = get_fish_by_id(selected_id);
+var caught = get_fish_caught_count(selected_fish.id);
+
+var item_w = sprite_get_width(selected_fish.sprite);
+var item_h = sprite_get_height(selected_fish.sprite);
+var scale = min(400 / item_w, 240 / item_h);
+draw_sprite_ext(selected_fish.sprite, 0, 700, 60, scale, scale, 0, c_white, 1);
+
+draw_set_font(fnt_fishName);
+draw_set_color(make_color_rgb(81, 32, 13));
+draw_text(700, 350, selected_fish.name);
+draw_set_font(fnt_fishDescription);
+draw_text_ext(700, 450, selected_fish.description, -1, 500);
+draw_set_font(fnt_text);
+draw_text(700, 670, "Points: " + string(selected_fish.points));
+draw_text(940, 670, "Caught: " + string(caught));
