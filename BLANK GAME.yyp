@@ -354,11 +354,11 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_fishing","path":"rooms/rm_fishing/rm_fishing.yy",},},
-    {"roomId":{"name":"rm_collect","path":"rooms/rm_collect/rm_collect.yy",},},
+    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_compendium","path":"rooms/rm_compendium/rm_compendium.yy",},},
+    {"roomId":{"name":"rm_collect","path":"rooms/rm_collect/rm_collect.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

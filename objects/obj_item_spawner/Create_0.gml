@@ -211,16 +211,20 @@ spawn_items = function() {
             new_item.item_name = selected_item.name;
             new_item.sprite_index = selected_item.sprite;
 
-            // Make all items approximately 16 pixels wide
-            var target_width = 48;
+			var target_width  = 48;
 			var target_height = 48;
 
-            var item_scale =
-                target_width
-                / sprite_get_width(new_item.sprite_index);
+			var item_w = sprite_get_width(new_item.sprite_index);
+			var item_h = sprite_get_height(new_item.sprite_index);
 
-            new_item.image_xscale = item_scale;
-            new_item.image_yscale = item_scale;
+		
+			var item_scale = min(
+			    target_width / item_w,
+			    target_height / item_h
+);
+
+new_item.image_xscale = item_scale;
+new_item.image_yscale = item_scale;
 
             spawned_amount++;
         }

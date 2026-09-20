@@ -24,8 +24,8 @@ switch (state){
 
     draw_rectangle(
         20,
-        50,
-        300,
+        70,
+        500,
         panel_bottom,
         false
     );
@@ -153,7 +153,7 @@ switch (state){
     draw_set_color(c_white);
 
     draw_text(
-        180,
+        150,
         panel_bottom - 22,
         "W/S: select"
     );
