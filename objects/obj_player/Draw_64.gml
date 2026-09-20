@@ -1,3 +1,5 @@
+draw_set_font(fnt_text);
+
 //Notification to pick up
 if (nearby_item != noone) {
     draw_set_halign(fa_center);
@@ -38,7 +40,7 @@ for (var i = 0; i < array_length(inventory); i++) {
 
     draw_text(
         20,
-        50 + i * 22,
+        50 + i * 30,
         string(i + 1) + ". " + item.name
     );
 }
