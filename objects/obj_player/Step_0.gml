@@ -88,3 +88,48 @@ if (!collection_finished) {
         room_goto(rm_fishing);
     }
 }
+
+//Sequence movement
+if (keyboard_check(ord("A")))
+	facing_left = true;
+else if (keyboard_check(ord("D")))
+	facing_left = false;
+
+function player_set_sequence(_sequence)
+{
+    current_sequence = _sequence;
+
+    if (player_sequence != -1)
+    {
+        layer_sequence_destroy(player_sequence);
+    }
+
+    player_sequence = layer_sequence_create("Sequences", x, y, current_sequence);
+    var scale = abs(image_xscale * 2);
+    if (facing_left)
+    {
+        scale = -scale;
+    }
+
+    layer_sequence_xscale(player_sequence, scale);
+    layer_sequence_yscale(player_sequence, image_yscale * 2);
+}
+
+if (move_x != 0 || move_y != 0)
+{
+    if (current_sequence != seq_player_walk)
+    {
+        player_set_sequence(seq_player_walk);
+    }
+}
+else
+{
+    if (current_sequence != seq_player_idle)
+    {
+        player_set_sequence(seq_player_idle);
+    }
+}
+
+// Keep Sequence attached to player
+layer_sequence_x(player_sequence, x);
+layer_sequence_y(player_sequence, y);
