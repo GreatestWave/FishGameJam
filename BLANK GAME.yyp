@@ -55,6 +55,7 @@
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"seq_player_idle","path":"sequences/seq_player_idle/seq_player_idle.yy",},},
     {"id":{"name":"seq_player_walk","path":"sequences/seq_player_walk/seq_player_walk.yy",},},
+    {"id":{"name":"Sequence3","path":"sequences/Sequence3/Sequence3.yy",},},
     {"id":{"name":"snd_music","path":"sounds/snd_music/snd_music.yy",},},
     {"id":{"name":"beetroot_00_1","path":"sprites/beetroot_00_1/beetroot_00_1.yy",},},
     {"id":{"name":"beetroot_00","path":"sprites/beetroot_00/beetroot_00.yy",},},
