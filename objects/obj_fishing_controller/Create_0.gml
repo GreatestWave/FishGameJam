@@ -63,8 +63,26 @@ get_bait_rarity = function(_bait_id) {
 			
 		case "BBag":
             return 1;
+			
+		case "spider":
+            return 0;
+		
+		case "bread":
+            return 1;
+			
+		case "book":
+            return 1;
+		
+		case "bottle":
+            return 3;
+			
+		case "poster":
+            return 2;
 
         case "battery":
+            return 2;
+			
+		case "cd":
             return 2;
 
         case "coin":
@@ -110,7 +128,7 @@ get_fish_from_bait = function(_bait_id) {
             return {
                 name: "Fisheye",
 				id: "eye_fish",
-                description: "Woah, you looking for something?",
+                description: "Woah, you're looking for something?",
                 sprite: spr_eyefish,
                 rarity: 1,
                 points: 40
@@ -124,7 +142,42 @@ get_fish_from_bait = function(_bait_id) {
                 rarity: 3,
                 points: 100
             };
-
+		case "battery":
+            return {
+                name: "Robot fish",
+				id: "robot_fish",
+                description: "Is this even a fish?",
+                sprite: spr_robot,
+                rarity: 2,
+                points: 60
+            };
+		case "coin":
+            return {
+                name: "Phishie bank",
+				id: "pig_fish",
+                description: "Wow this means I'm rich now?!",
+                sprite: spr_pigfish,
+                rarity: 3,
+                points: 200
+            };
+		case "poster":
+            return {
+                name: "Gill Fishstwood",
+				id: "wester_fish",
+                description: "Is that the legendary aquatic desperado?! Better toss it into the water before noon",
+                sprite: spr_westernfish,
+                rarity: 3,
+                points: 100
+            };
+		case "bottle":
+            return {
+                name: "Gold fish",
+				id: "gold_fish",
+                description: "What a beauty, it shines so bright",
+                sprite: spr_goldenfish,
+                rarity: 3,
+                points: 200
+            };
     }
 
     return {
