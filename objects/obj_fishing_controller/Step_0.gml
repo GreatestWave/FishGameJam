@@ -9,8 +9,6 @@ switch (state) {
     // SELECT BAIT
 
     case "select":
-    var bait_count =
-        array_length(global.bait_inventory);
 
     // Return button is always the last option
     var return_index = bait_count;
@@ -263,9 +261,6 @@ if (keyboard_check_pressed(vk_space)) {
     if (mash_count >= mash_target) {
 		bobber_instance.visible = false;
 
-		global.fishing_score +=
-        current_fish.points;
-
 		// Save fish in the compendium
 		register_caught_fish(current_fish);
 
@@ -289,8 +284,6 @@ if (keyboard_check_pressed(vk_space)) {
 
 case "caught":
     if (keyboard_check_pressed(vk_enter)) {
-        var bait_count =
-            array_length(global.bait_inventory);
 
         if (bait_count > 0) {
             selected_bait = clamp(
@@ -317,8 +310,6 @@ case "caught":
 
 case "failed":
     if (keyboard_check_pressed(vk_space)) {
-        var bait_count =
-            array_length(global.bait_inventory);
 
         if (bait_count > 0) {
             selected_bait = clamp(

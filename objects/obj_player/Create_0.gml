@@ -6,7 +6,7 @@ move_speed = 3;
 nearby_item = noone;
 interaction_distance = 40;
 inventory = [];
-collection_time = 30;
+collection_time = 10;
 collection_finished = false;
 
 current_sequence = seq_player_idle;

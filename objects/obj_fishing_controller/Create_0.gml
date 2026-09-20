@@ -1,5 +1,3 @@
-
-
 state = "select";
 
 selected_bait = 0;
@@ -155,6 +153,8 @@ get_fish_from_bait = function(_bait_id)
 
 register_caught_fish = function(_fish)
 {
+    global.fishing_score += _fish.points;
+
     for (var i = 0; i < array_length(global.fish_compendium); i++)
     {
         if (global.fish_compendium[i].id == _fish.id)
@@ -164,11 +164,12 @@ register_caught_fish = function(_fish)
         }
     }
 
-    array_push(
-        global.fish_compendium,
-        {
-            id: _fish.id,
-            caught_count: 1
-        }
-    );
+    var new_entry = {
+        id: _fish.id,
+        caught_count: 1
+    };
+
+    array_push(global.fish_compendium, new_entry);
 };
+
+draw_set_font(fnt_text);

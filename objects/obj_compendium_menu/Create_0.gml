@@ -16,6 +16,11 @@ if (!variable_global_exists("fish_compendium"))
     global.fish_compendium = [];
 }
 
+if (!variable_global_exists("fishing_score"))
+{
+    global.fishing_score = 0;
+}
+
 get_fish_by_id = function(_id)
 {
     for (var i = 0; i < array_length(global.fish); i++)

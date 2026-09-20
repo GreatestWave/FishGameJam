@@ -19,7 +19,7 @@ switch (state){
     // INVENTORY BACKGROUND
     // =============================
 
-    draw_set_alpha(0.85);
+    /*draw_set_alpha(0.85);
     draw_set_color(c_black);
 
     draw_rectangle(
@@ -28,7 +28,7 @@ switch (state){
         500,
         panel_bottom,
         false
-    );
+    );*/
 
     draw_set_alpha(1);
     draw_set_halign(fa_left);
@@ -46,11 +46,11 @@ switch (state){
     // =============================
 
     if (bait_count <= 0) {
-        draw_set_color(c_ltgray);
+        draw_set_color(make_color_rgb(240, 60, 60));
 
         draw_text(
             40,
-            105,
+            115,
             "No bait remaining!"
         );
     }
@@ -68,7 +68,7 @@ switch (state){
             115 + i * 36;
 
         // Selection background
-        if (i == selected_bait) {
+        /*if (i == selected_bait) {
             draw_set_color(c_dkgray);
 
             draw_rectangle(
@@ -78,7 +78,7 @@ switch (state){
                 item_y + 26,
                 false
             );
-        }
+        }*/
 
         // Bait icon
         if (variable_struct_exists(bait, "sprite")) {
@@ -124,7 +124,7 @@ switch (state){
         115 + bait_count * 36 + 5;
 
     if (selected_bait == return_index) {
-        draw_set_color(c_dkgray);
+        /*draw_set_color(c_dkgray);
 
         draw_rectangle(
             32,
@@ -132,7 +132,7 @@ switch (state){
             285,
             return_y + 26,
             false
-        );
+        );*/
 
         draw_set_color(c_yellow);
     } else {
@@ -140,8 +140,8 @@ switch (state){
     }
 
     draw_text(
-        50,
-        return_y,
+        40,
+        return_y + 40,
         "Stop fishing"
     );
 
@@ -152,17 +152,8 @@ switch (state){
 
     draw_set_color(c_white);
 
-    draw_text(
-        150,
-        panel_bottom - 22,
-        "W/S: select"
-    );
-
-    draw_text(
-        40,
-        panel_bottom - 22,
-        "Enter: confirm"
-    );
+    draw_text(40, 640, "W/S: select");
+    draw_text(40, 670, "Enter: confirm");
 
     break;
 	
@@ -190,7 +181,7 @@ switch (state){
 
     draw_text(
         gui_width / 2,
-        65,
+        70,
         "Watch the bobber"
     );
 
@@ -213,7 +204,7 @@ switch (state){
 
     draw_text(
         gui_width / 2,
-        80,
+        90,
         "PRESS SPACE!"
     );
 
@@ -224,21 +215,21 @@ switch (state){
     );
 
     draw_rectangle(
-        gui_width / 2 - 102,
-        108,
-        gui_width / 2 + 102,
-        132,
+        gui_width / 2 - 150,
+        150,
+        gui_width / 2 + 150,
+        190,
         true
     );
 
     draw_set_color(c_lime);
 
     draw_rectangle(
-        gui_width / 2 - 100,
-        110,
-        gui_width / 2 - 100
+        gui_width / 2 - 148,
+        152,
+        gui_width / 2 - 148
             + 200 * bite_progress,
-        130,
+        188,
         false
     );
 
@@ -256,13 +247,13 @@ switch (state){
 
     draw_text(
         gui_width / 2,
-        65,
+        80,
         "PRESS SPACE REPEATEDLY!"
     );
 
     draw_text(
         gui_width / 2,
-        95,
+        120,
         string(mash_count)
         + " / "
         + string(mash_target)
@@ -319,13 +310,14 @@ switch (state){
     draw_set_color(c_yellow);
     draw_set_halign(fa_center);
     draw_set_valign(fa_top);
-
+	draw_set_font(fnt_header);
+	
     draw_text_transformed(
         gui_width / 2,
-        55,
+        40,
         "YOU CAUGHT",
-        1.5,
-        1.5,
+        1,
+        1,
         0
     );
 
@@ -342,8 +334,8 @@ var fish_width =
 var fish_height =
     sprite_get_height(fish_sprite);
 
-var maximum_width = gui_width * 0.55;
-var maximum_height = gui_height * 0.4;
+var maximum_width = 500;
+var maximum_height = 300;
 
 var fish_scale = min(
     maximum_width / fish_width,
@@ -408,17 +400,18 @@ draw_sprite_stretched(
     // =====================================
 
     var text_y =
-        fish_y + draw_height + 15;
+        fish_y + draw_height + 30;
 
     draw_set_color(c_white);
     draw_set_halign(fa_center);
-
+	draw_set_font(fnt_fishName);
+	
     draw_text_transformed(
         gui_width / 2,
         text_y,
         current_fish.name,
-        1.3,
-        1.3,
+        1,
+        1,
         0
     );
 
@@ -429,13 +422,14 @@ draw_sprite_stretched(
 
     draw_set_color(c_ltgray);
     draw_set_halign(fa_center);
+	draw_set_font(fnt_fishDescription);
 
     draw_text_ext(
         gui_width / 2,
-        text_y + 40,
+        text_y + 80,
         current_fish.description,
-        24,
-        gui_width - 120
+        -1,
+        gui_width - 300
     );
 
 
@@ -446,8 +440,8 @@ draw_sprite_stretched(
     draw_set_color(c_yellow);
 
     draw_text(
-        gui_width / 2,
-        gui_height - 90,
+        gui_width / 2 + 200,
+        620,
         "+" + string(current_fish.points) + " points"
     );
 
@@ -466,11 +460,9 @@ draw_sprite_stretched(
 		}
 	}
 
-draw_set_color(c_ltgray);
-
 draw_text(
-    gui_width / 2,
-    gui_height - 115,
+    gui_width / 2 - 200,
+    620,
     "Caught: " + string(caught_total)
 );
 
@@ -482,7 +474,7 @@ draw_text(
 
     draw_text(
         gui_width / 2,
-        gui_height - 55,
+        gui_height - 90,
         "Press ENTER to continue"
     );
 
@@ -493,3 +485,5 @@ draw_set_color(c_white);
 draw_set_alpha(1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+draw_set_font(fnt_text);
