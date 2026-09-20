@@ -69,6 +69,12 @@ if (nearby_item != noone && keyboard_check_pressed(ord("E"))) {
 
     // Remove item from the room
     instance_destroy(nearby_item);
+	
+	   audio_play_sound(
+        snd_boop,
+        1,
+        false
+    );
 
     nearby_item = noone;
 }

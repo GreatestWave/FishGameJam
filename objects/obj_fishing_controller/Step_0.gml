@@ -158,19 +158,27 @@ case "casting":
         * cast_arc_height;
 
     // Bobber reached the water
-    if (cast_progress >= 1) {
-        bobber_instance.x = bobber_target_x;
-        bobber_instance.y = bobber_target_y;
+if (cast_progress >= 1) {
+    bobber_instance.x = bobber_target_x;
+    bobber_instance.y = bobber_target_y;
 
-        bobber_instance.water_y = bobber_target_y;
-        bobber_instance.bob_time = 0;
-        bobber_instance.is_in_water = true;
-        bobber_instance.is_biting = false;
+    bobber_instance.water_y = bobber_target_y;
+    bobber_instance.bob_time = 0;
+    bobber_instance.is_in_water = true;
+    bobber_instance.is_biting = false;
 
-        waiting_timer = random_range(1.5, 4);
+    // Play splash sound once
+    audio_play_sound(
+        snd_water_splash,
+        1,
+        false
+    );
 
-        state = "waiting";
-    }
+    waiting_timer = random_range(1.5, 4);
+    state = "waiting";
+}
+	
+	
 
     break;
 

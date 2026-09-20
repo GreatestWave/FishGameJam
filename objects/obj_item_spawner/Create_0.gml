@@ -77,12 +77,6 @@ item_types = [
         weight: 5
     },
 	{
-        id: "cd",
-        name: "Music CD",
-        sprite: spr_cd,
-        weight: 15
-    },
-	{
         id: "wok",
         name: "Box and chopsticks",
         sprite: spr_wok,
@@ -93,12 +87,6 @@ item_types = [
         name: "Wanted poster",
         sprite: spr_poster,
         weight: 10
-    },
-	{
-        id: "cd",
-        name: "Music CD",
-        sprite: spr_cd,
-        weight: 15
     },
 	{
         id: "battery",

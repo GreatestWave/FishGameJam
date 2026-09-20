@@ -11,49 +11,29 @@
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_205311E5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_205311E5","objectId":{"name":"obj_fisherman","path":"objects/obj_fisherman/obj_fisherman.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.060444146,"scaleY":0.060444154,"x":192.0,"y":192.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"FishingLine","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_55C8D543","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_55C8D543","objectId":{"name":"obj_fishing_controller","path":"objects/obj_fishing_controller/obj_fishing_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":64.0,},
       ],"layers":[],"name":"FishingLine","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRTileLayer":"","%Name":"Tiles_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
-          -2,3,-29,-2147483648,1,3,-20,-2147483648,4,1160,1156,1156,1220,-5,-2147483648,-3,3,-17,-2147483648,6,
-          1160,1154,1153,1153,1155,1220,-7,-2147483648,1,3,-16,-2147483648,1,1158,-4,1153,1,1219,-24,-2147483648,
-          6,1222,1157,1153,1153,1217,1223,-25,-2147483648,4,1222,1221,1221,1223,-79,-2147483648,-5,386,-5,0,1,
-          -2147483648,-4,3,-22,-2147483648,-4,1,-4,3,-13,2290,1,2291,-16,-2147483648,-13,2354,1,2355,-16,-2147483648,
-          -13,2354,1,2355,-16,-2147483648,-13,2418,1,2419,-106,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMREffectLayer":"","%Name":"Effect_1","depth":300,"effectEnabled":true,"effectType":"_filter_heathaze","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_1","properties":[
-        {"name":"g_Distort1Speed","type":0,"value":"0.004",},
-        {"name":"g_Distort2Speed","type":0,"value":"0.011",},
-        {"name":"g_Distort1Scale","type":0,"value":"9.3",},
-        {"name":"g_Distort1Scale","type":0,"value":"1.3",},
-        {"name":"g_Distort2Scale","type":0,"value":"30.3",},
-        {"name":"g_Distort2Scale","type":0,"value":"3.3",},
-        {"name":"g_Distort1Amount","type":0,"value":"2",},
-        {"name":"g_Distort2Amount","type":0,"value":"4",},
-        {"name":"g_ChromaSpreadAmount","type":0,"value":"0.5",},
-        {"name":"g_CamOffsetScale","type":0,"value":"1",},
-        {"name":"g_DistortTexture","type":2,"value":"_filter_heathaze_noise_sprite",},
-      ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRTileLayer":"","%Name":"water","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"water","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
-          -50,-2147483648,-7,0,-23,-2147483648,-7,0,-23,-2147483648,-7,0,-23,-2147483648,-8,0,-22,-2147483648,
-          -7,0,2,-2147483648,0,-26,-2147483648,-4,0,-61,-2147483648,-30,8,210,1163,1164,1165,1166,1163,1164,1165,
-          1166,1163,1164,1165,1166,1163,1164,1163,1164,1165,1166,1163,1164,1165,1166,1163,1164,1165,1166,1163,
-          1164,1165,1166,1227,1228,1229,1230,1227,1228,1229,1230,1227,1228,1229,1230,1227,1228,1227,1228,1229,
-          1230,1227,1228,1229,1230,1227,1228,1229,1230,1227,1228,1229,1230,1291,1292,1293,1294,1291,1292,1293,
-          1294,1291,1292,1293,1294,1291,1292,1291,1292,1293,1294,1291,1292,1293,1294,1291,1292,1293,1294,1291,
-          1292,1293,1294,1355,1356,1357,1358,1355,1356,1357,1358,1355,1356,1357,1358,1355,1356,1355,1356,1357,
-          1358,1355,1356,1357,1358,1355,1356,1357,1358,1355,1356,1357,1358,1228,1229,1230,1227,1228,1229,1230,
-          1227,1228,1229,1230,1227,1228,1229,1230,1227,1228,1229,1230,1227,1228,1229,1230,1227,1228,1229,1230,
-          1227,1228,1229,1292,1293,1294,1291,1292,1293,1294,1291,1292,1293,1294,1291,1292,1293,1294,1291,1292,
-          1293,1294,1291,1292,1293,1294,1291,1292,1293,1294,1291,1292,1293,1356,1357,1358,1355,1356,1357,1358,
-          1355,1356,1357,1358,1355,1356,1357,1358,1355,1356,1357,1358,1355,1356,1357,1358,1355,1356,1357,1358,
-          1355,1356,1357,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRAssetLayer":"","%Name":"Background_Details","assets":[],"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background_Details","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4294947506,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"$GMRAssetLayer":"","%Name":"cloud","assets":[
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_22D67641","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_22D67641","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1962052,"scaleY":0.19620521,"spriteId":{"name":"spr_fishcloud","path":"sprites/spr_fishcloud/spr_fishcloud.yy",},"x":318.0,"y":20.0,},
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_7501CC69","animationSpeed":1.0,"colour":771751936,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7501CC69","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1962052,"scaleY":0.19620521,"spriteId":{"name":"spr_fishcloud","path":"sprites/spr_fishcloud/spr_fishcloud.yy",},"x":316.0,"y":159.0,},
+      ],"depth":200,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"cloud","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRAssetLayer":"","%Name":"bridge","assets":[
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_1046FA54","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1046FA54","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":-0.08894376,"scaleY":0.09632217,"spriteId":{"name":"spr_bridge","path":"sprites/spr_bridge/spr_bridge.yy",},"x":210.95538,"y":174.28003,},
+      ],"depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"bridge","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRAssetLayer":"","%Name":"Water","assets":[
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_1BF95202","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1BF95202","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.44609666,"scaleY":0.28969958,"spriteId":{"name":"spr_water","path":"sprites/spr_water/spr_water.yy",},"x":0.0,"y":0.0,},
+      ],"depth":400,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Water","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRAssetLayer":"","%Name":"clouds","assets":[
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_3267B922","animationSpeed":1.0,"colour":1811939327,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_3267B922","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.44609666,"scaleY":0.27837232,"spriteId":{"name":"spr_clouds","path":"sprites/spr_clouds/spr_clouds.yy",},"x":0.0,"y":-15.954926,},
+      ],"depth":500,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"clouds","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
+    {"$GMRAssetLayer":"","%Name":"Background_Details","assets":[
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_7F3080E4","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7F3080E4","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.44609666,"scaleY":0.2864429,"spriteId":{"name":"spr_sky","path":"sprites/spr_sky/spr_sky.yy",},"x":0.0,"y":0.0,},
+      ],"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background_Details","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4294947506,"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rm_fishing",
   "parent":{

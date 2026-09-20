@@ -81,9 +81,6 @@ get_bait_rarity = function(_bait_id) {
 
         case "battery":
             return 2;
-			
-		case "cd":
-            return 2;
 
         case "coin":
             return 3;
@@ -101,6 +98,15 @@ get_bait_rarity = function(_bait_id) {
 get_fish_from_bait = function(_bait_id) {
     switch (_bait_id) {
         case "worm":
+            return {
+				id: "common_fish",
+                name: "Common Fish",
+                description: "Well it's a fish, an avarage Joe from the fish world",
+                sprite: spr_commonfish,
+                rarity: 0,
+                points: 10
+            };
+		case "spider":
             return {
 				id: "common_fish",
                 name: "Common Fish",
