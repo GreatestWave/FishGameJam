@@ -26,8 +26,8 @@ result_text = "";
 bobber_instance = noone;
 
 // Position of the rod tip
-rod_x = 200;
-rod_y = 200;
+rod_x = 233;
+rod_y = 176;
 
 // Position where the bobber lands
 bobber_target_x = 300;
@@ -90,6 +90,9 @@ get_bait_rarity = function(_bait_id) {
 			
 		case "realworm":
             return 3;
+			
+		case "wok":
+            return 2;
     }
 
     return 0;
@@ -178,11 +181,38 @@ get_fish_from_bait = function(_bait_id) {
                 rarity: 3,
                 points: 200
             };
+		case "wok":
+            return {
+                name: "Sushi fish",
+				id: "sushi_fish",
+                description: "Now that is one gourmet fish",
+                sprite: spr_sushi,
+                rarity: 2,
+                points: 50
+            };
+		case "book":
+            return {
+                name: "Ol'fish",
+				id: "old_fish",
+                description: "Are fish retirnment houses a real thing?",
+                sprite: spr_oldfish,
+                rarity: 1,
+                points: 50
+            };
+		case "bread":
+            return {
+                name: "Bread fish",
+				id: "bread_fish",
+                description: "Damn it all soaked, look delicious tho",
+                sprite: spr_breadfish,
+                rarity: 1,
+                points: 40
+            };
     }
 
     return {
         name: "???",
-        description: "I don't really know how I get this",
+        description: "I don't really know how I hooked this",
         sprite: spr_realfish,
         rarity: 0,
         points: 5

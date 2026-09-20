@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_fisherman_sitting",
+    "path":"sprites/spr_fisherman_sitting/spr_fisherman_sitting.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -334,48 +334,74 @@ switch (state){
     // FISH IMAGE
     // =====================================
 
-    var fish_sprite = current_fish.sprite;
+var fish_sprite = current_fish.sprite;
 
-    var fish_width =
-        sprite_get_width(fish_sprite);
+var fish_width =
+    sprite_get_width(fish_sprite);
 
-    var fish_height =
-        sprite_get_height(fish_sprite);
+var fish_height =
+    sprite_get_height(fish_sprite);
 
-    var maximum_width =
-        gui_width * 0.55;
+var maximum_width = gui_width * 0.55;
+var maximum_height = gui_height * 0.4;
 
-    var maximum_height =
-        gui_height * 0.4;
+var fish_scale = min(
+    maximum_width / fish_width,
+    maximum_height / fish_height
+);
 
-    var fish_scale = min(
-        maximum_width / fish_width,
-        maximum_height / fish_height
-    );
+var draw_width = fish_width * fish_scale;
+var draw_height = fish_height * fish_scale;
 
-    var draw_width =
-        fish_width * fish_scale;
+var fish_x = (gui_width - draw_width) / 2;
+var fish_y = 105;
 
-    var draw_height =
-        fish_height * fish_scale;
 
-    var fish_x =
-        (gui_width - draw_width) / 2;
+// Glow only for Golden Fish
+if (current_fish.id == "gold_fish") {
+    var glow_pulse =
+        1 + sin(current_time / 200) * 0.04;
 
-    var fish_y =
-        105;
+    var glow_width =
+        draw_width * 1.15 * glow_pulse;
 
-    draw_set_color(c_white);
+    var glow_height =
+        draw_height * 1.15 * glow_pulse;
 
-    draw_sprite_stretched(
+    var glow_x =
+        fish_x - (glow_width - draw_width) / 2;
+
+    var glow_y =
+        fish_y - (glow_height - draw_height) / 2;
+
+    gpu_set_blendmode(bm_add);
+
+    draw_sprite_stretched_ext(
         fish_sprite,
         0,
-        fish_x,
-        fish_y,
-        draw_width,
-        draw_height
+        glow_x,
+        glow_y,
+        glow_width,
+        glow_height,
+        c_yellow,
+        0.35
     );
 
+    gpu_set_blendmode(bm_normal);
+}
+
+
+// Normal fish image
+draw_set_color(c_white);
+
+draw_sprite_stretched(
+    fish_sprite,
+    0,
+    fish_x,
+    fish_y,
+    draw_width,
+    draw_height
+);
 
     // =====================================
     // FISH NAME
